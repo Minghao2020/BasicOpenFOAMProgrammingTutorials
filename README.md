@@ -1,5 +1,7 @@
 ## Welcome to this set of OpenFOAM® programming tutorials!
 
+minghao modified
+
 These are intented to provide a beginner C++ programmer with hands-on examples of
 how to develop code within the OpenFOAM® framework. These tutorials hope to be more
 approachable than most of the materials available on-line, which tend to assume
