@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# stops if a command or pipeline has an error
+set -e
+
+# Run from this directory
+cd "${0%/*}" || exit 1
+
+# Source tutorial run functions
+. "$WM_PROJECT_DIR/bin/tools/RunFunctions"
+
+# Compile the application
+wclean
+wmake
+echo "\n Compilation is done !!! \n"
+
+
+echo "-------------------------------------------------------"
+# Get the application name
+getApplication=$(grep "EXE" Make/files | awk -F '/' '{print $NF}')
+echo "run $getApplication "
+echo "-------------------------------------------------------"
+
+# Run the application and output 
+$getApplication | tee log.$getApplication
+
+# RunApplication utility will redirect the output to a log file
+# runApplication $getApplication
+
