@@ -86,3 +86,7 @@ doc/Doxygen/DTAGS
 # Ignore the test directory and unpublished files
 /tutorialsTest
 /TODO
+
+# Ignore vscode settings in sub-folders
+/OFProg*/.vscode/*
+
